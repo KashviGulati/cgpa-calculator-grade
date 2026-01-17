@@ -221,3 +221,111 @@ header p {
   font-weight: 700;
   color: var(--secondary);
 }
+
+
+/* ============================= */
+/* 📱 MOBILE & TABLET RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 40px 24px 60px;
+  }
+
+  header h1 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Header */
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  /* Card spacing */
+  .card {
+    padding: 24px;
+  }
+
+  /* Subject row → STACK */
+  .subject-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .subject-row input {
+    width: 100%;
+  }
+
+  .grade-preview {
+    text-align: left;
+    padding-left: 4px;
+  }
+
+  .remove {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Actions buttons */
+  .actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .actions button {
+    width: 100%;
+    font-size: 17px;
+  }
+
+  /* CGPA circle */
+  .cgpa-box {
+    width: 180px;
+    height: 180px;
+  }
+
+  .cgpa-box span {
+    font-size: 2.8rem;
+  }
+
+  /* Grade system */
+  .grade-table {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Extra small phones */
+  header h1 {
+    font-size: 1.9rem;
+  }
+
+  .wrapper {
+    padding: 32px 16px 50px;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .cgpa-box {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cgpa-box span {
+    font-size: 2.4rem;
+  }
+
+  .grade-table {
+    grid-template-columns: 1fr;
+  }
+}
