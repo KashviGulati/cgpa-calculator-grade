@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CGPA Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main class="wrapper">
+  <header>
+    <h1>CGPA Calculator</h1>
+    <p>Calculate your CGPA using the official grade-point system</p>
+  </header>
+
+  <section class="card">
+    <div id="subjectFields" class="subjects">
+      <div class="subject-row">
+        <input placeholder="Subject Name">
+        <input type="number" placeholder="Credits" min="1">
+        <input type="number" placeholder="Marks (0–100)" min="0" max="100">
+        <span class="grade-preview">—</span>
+        <button class="remove">✕</button>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="addSubject">Add Subject</button>
+      <button id="calculate">Calculate CGPA</button>
+    </div>
+  </section>
+
+  <section class="result">
+    <div class="cgpa-box">
+      <span id="cgpaValue">—</span>
+      <small>CGPA</small>
+    </div>
+  </section>
+
+  <section class="grades">
+    <h3>Grade Point Reference</h3>
+    <div class="grade-table">
+      <div>90–100 <b>O</b> <span>10</span></div>
+      <div>80–89 <b>A+</b> <span>9</span></div>
+      <div>70–79 <b>A</b> <span>8</span></div>
+      <div>60–69 <b>B+</b> <span>7</span></div>
+      <div>50–59 <b>B</b> <span>6</span></div>
+      <div>45–49 <b>C</b> <span>5</span></div>
+      <div>40–44 <b>D</b> <span>4</span></div>
+      <div>Below 40 <b>F</b> <span>0</span></div>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

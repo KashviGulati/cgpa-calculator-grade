@@ -1,0 +1,223 @@
+:root {
+  --primary: #4f46e5;
+  --secondary: #14b8a6;
+  --bg: #f6f8fc;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ---------- Layout ---------- */
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 40px 80px;
+}
+
+header h1 {
+  font-size: 3.2rem;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* ---------- Card ---------- */
+
+.card {
+  margin-top: 40px;
+  background: var(--card);
+  border-radius: 22px;
+  padding: 32px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* ---------- Subjects ---------- */
+
+.subjects {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.subject-row {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1.5fr 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 16px;
+  background: #fafbff;
+  border: 1px solid var(--border);
+  transition: all 0.25s ease;
+}
+
+.subject-row:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 25px rgba(79,70,229,0.15);
+}
+
+.subject-row input {
+  padding: 14px 16px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.subject-row input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
+}
+
+/* ---------- Grade Preview ---------- */
+
+.grade-preview {
+  font-weight: 700;
+  color: var(--secondary);
+  text-align: center;
+}
+
+/* ---------- Buttons ---------- */
+
+.remove {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.remove:hover {
+  background: #fecaca;
+  transform: scale(1.05);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.actions button {
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+#addSubject {
+  background: #eef2ff;
+  color: var(--primary);
+}
+
+#addSubject:hover {
+  background: #e0e7ff;
+  transform: translateY(-2px);
+}
+
+#calculate {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 15px 30px rgba(79,70,229,0.35);
+}
+
+#calculate:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* ---------- CGPA Result ---------- */
+
+.result {
+  margin: 80px 0 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.cgpa-box {
+  background: linear-gradient(135deg, #eef2ff, #f0fdfa);
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.cgpa-box:hover {
+  transform: scale(1.05);
+}
+
+.cgpa-box span {
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* ---------- Grade System ---------- */
+
+.grades h3 {
+  margin-bottom: 20px;
+}
+
+.grade-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 20px;
+}
+
+.grade-table div {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: all 0.25s ease;
+}
+
+.grade-table div:hover {
+  transform: translateY(-6px);
+  border-color: var(--secondary);
+  box-shadow: 0 20px 40px rgba(20,184,166,0.25);
+}
+
+.grade-table b {
+  display: block;
+  font-size: 1.4rem;
+  margin: 6px 0;
+  color: var(--primary);
+}
+
+.grade-table span {
+  font-weight: 700;
+  color: var(--secondary);
+}
